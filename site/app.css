@@ -5,3 +5,13 @@
 .hidden {
     display: none;
 }
+
+figcaption {
+    text-align: left;
+    font-size: 25px;
+    text-transform: capitalize;
+}
+
+img {
+    max-height: max-content;
+}

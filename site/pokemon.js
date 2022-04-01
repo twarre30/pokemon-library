@@ -3,12 +3,12 @@ const $spinner = document.querySelector(".spinner")
 
 
 function addPokemonImage(pokemon) {
-    console.log(pokemon)
     const div = document.createElement('div')
     div.innerHTML = `
-        <a href="pokemon.html?pokemon=${pokemon.name}">
+        <figure>
             <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}" />
-        </a>    
+            <figcaption>${pokemon.name}</figcaption>
+        </figure>
     `
     $pokemon.append(div)
 }
