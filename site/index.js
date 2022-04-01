@@ -12,8 +12,6 @@ function addPokemonImage(pokemon) {
     app.append(div)
 }
 
-
-
 const url = 'https://pokeapi.co/api/v2/pokemon?limit=50&offset=800'
 fetch(url)
     .then(response => {
@@ -31,35 +29,3 @@ fetch(url)
     })
 
 
-
-
-/*
-
-const url = 'https://pokeapi.co/api/v2/pokemon/?limit=50&offset750'
-    fetch(url)
-    .then(response => response.json())
-    .then(response => {
-        const pokemonList = response.results;
-        const httpRequests = pokemonList
-            .map(pokemon => pokemon.url)
-            .map(url => {
-                return fetch(url).then(response => response.json())
-    })
-    
-    return Promise.all(httpRequests) 
-    }).then(res => {
-        res.map(res => {
-            const li = document.createElement('li')
-            const img = document.createElement('img')
-            img.src = response.sprites.font_default
-            li.append(img)
-            return li
-        }).forEach(li => {
-            ul.append(li)
-        })
-    })
-    
-    
-    
-    */
-    
