@@ -1,3 +1,20 @@
+h1 {
+    text-align: center;
+}
+
+h1 a {
+    color: blue;
+    font-size: 50px;
+}
+
+#app {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: cornsilk;
+}
+
+
 .spinner {
     width: auto;
 }
@@ -7,11 +24,12 @@
 }
 
 figcaption {
-    text-align: left;
-    font-size: 25px;
+    text-align: center;
+    font-size: 30px;
     text-transform: capitalize;
 }
 
 img {
-    max-height: max-content;
+    width: 200px;
+    max-height: auto;
 }
