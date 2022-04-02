@@ -1,3 +1,10 @@
+
+body {
+    text-transform: capitalize;
+    background-color: cornsilk;
+    padding: 50px;
+}
+
 h1 {
     text-align: center;
 }
@@ -7,13 +14,16 @@ h1 a {
     font-size: 50px;
 }
 
+a {
+    text-decoration: none;
+}
+
 #app {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    background-color: cornsilk;
+    padding-top: 50px;
 }
-
 
 .spinner {
     width: auto;
@@ -23,20 +33,88 @@ h1 a {
     display: none;
 }
 
-figcaption {
+.imageName {
     text-align: center;
     font-size: 30px;
-    text-transform: capitalize;
 }
-
 
 img {
     width: 200px;
-    max-height: auto;
+    padding: 20px;
 }
 
 h2 {
+    float:inline-end;
     font-size: 50px ;
     text-align: center;
     color: lightcoral;
+    padding: 50px 10px;
+    margin-right: 10%;
 }
+
+#pokemon-details {
+    position: relative;
+    font-size: 50px;
+}
+
+.image2 {
+    display: block;
+    width: 300px;
+}
+
+.fig2 {
+    display: block;
+    margin-left: 5%;
+}
+
+li {
+    text-decoration: none;
+}
+
+ul {
+    position: absolute;
+    left: 35%;
+    font-size: 30px;
+    bottom: 5%;
+}
+
+.ability-name {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 25px;
+    padding: 15px;
+}
+
+.ability-short-description {
+    text-align: center;
+}    
+
+nav {
+    float: left;
+    font-size: 25px;
+    color: black;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 3px solid black;
+    padding: 10px;
+    background-color: lightblue;
+    
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

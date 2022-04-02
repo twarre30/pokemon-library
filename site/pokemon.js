@@ -1,4 +1,4 @@
-const $pokemon = document.querySelector('#pokemon')
+const $pokemon = document.querySelector('#pokemon-details')
 const $spinner = document.querySelector(".spinner")
 const ul = document.querySelector('ul')
 
@@ -6,8 +6,8 @@ function addPokemonImage(pokemon) {
     const div = document.createElement('div')
     div.innerHTML = `
         <figure>
-            <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}" />
-            <figcaption>${pokemon.name}</figcaption>
+            <img class= 'image2'src="${pokemon.sprites.front_default}" alt="${pokemon.name}" />
+            <figcaption class= 'fig2'>${pokemon.name}</figcaption>
         </figure>
     `
     $pokemon.append(div)
@@ -18,12 +18,13 @@ function addPokemonAbilities(pokemon) {
     const flavor_text = (pokemon.flavor_text_entries)
         .find(flavor_text_entry => flavor_text_entry.language.name === 'en')
     li.innerHTML = `
-        <span class = "ability-name">${pokemon.name}</span>
-        <br>
-        <span class="ability-short-description">${flavor_text.flavor_text}</span>
+        <span class= "ability-name">${pokemon.name}</span>
+        <br><br>
+        <span class= "ability-short-description">${flavor_text.flavor_text}</span>
+        <br><br>
         `
     ul.append(li)
-    }
+}
 
 const url = new URL(window.location)
 const queryString = new URLSearchParams(url.search)
@@ -42,5 +43,10 @@ fetch(`https://pokeapi.co/api/v2/pokemon/${queryString.get("pokemon")}`)
         $spinner.classList.add("hidden")
         responses.forEach(response => {
             addPokemonAbilities(response)
-    })
+        })
+            .catch((error) => {
+            const $p = document.createElement('p');
+            $p.textContent = "Something went wrong!";
+            document.querySelector('#pokemon-details').append($p);
+            })
     })
